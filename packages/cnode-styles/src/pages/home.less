@@ -1,0 +1,177 @@
+@import url("../import");
+
+.home {
+  &__tabs {
+    list-style: none;
+    background: #80bd01;
+
+    &-wrapper {
+      margin: 0;
+      padding: 5px 0;
+    }
+  }
+
+  &__tab {
+    display: inline-block;
+    font-size: 18px;
+
+    &:not(:first-of-type) {
+      margin-left: 20px;
+    }
+
+    &-link {
+      color: #fff;
+      text-decoration: none;
+      line-height: 30px;
+    }
+
+    &--active &-link {
+      font-weight: 600;
+    }
+  }
+
+  &__main {
+    background: #fff;
+    margin: 20px 0;
+  }
+
+  &__posts {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__post {
+    @right-width: 70px;
+
+    position: relative;
+    list-style: none;
+    padding: @space;
+
+    &-left {
+      margin-right: @right-width;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-avatar {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-info {
+      vertical-align: middle;
+    }
+
+    &-count {
+      display: inline-block;
+      width: 70px;
+      vertical-align: middle;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    &-tab {
+      vertical-align: middle;
+      background: #80bd01;
+      padding: 2px 4px;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    &-title {
+      white-space: nowrap;
+      vertical-align: middle;
+      padding: 0 0.5em;
+      font-size: 16px;
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: #888;
+      }
+    }
+
+    &-right {
+      position: absolute;
+      right: @space;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: @right-width;
+      line-height: 20px;
+      height: 20px;
+      text-align: right;
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      &-avatar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      &-count {
+        text-align: left;
+      }
+
+      &-left {
+        position: relative;
+        height: 40px;
+        padding-left: @avatar-size + @space;
+        margin-right: 0;
+      }
+
+      &-info {
+        display: inline-block;
+      }
+
+      &-title {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: @avatar-size + @space;
+        right: 0;
+        padding-left: 0;
+        .overflow-ellipsis();
+      }
+
+      &-right {
+        margin: 0;
+        top: @space;
+      }
+    }
+  }
+
+  &__pagination {
+    overflow: hidden;
+    margin-top: @space;
+    background: #fff;
+
+    &-prev,
+    &-next {
+      padding: 5px @space;
+      color: #007bff;
+    }
+
+    &-prev {
+      float: left;
+    }
+
+    &-next {
+      float: right;
+    }
+
+    &-link {
+      text-decoration: none;
+    }
+  }
+}

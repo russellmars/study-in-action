@@ -1,0 +1,30 @@
+.avatar-bg() {
+  width: @avatar-size;
+  height: @avatar-size;
+  border-radius: 3px;
+  background-color: #e1e1e1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.iphonex-safe-space() {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.overflow-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.half-border(@property, @color) {
+  @{property}: 1px solid @color;
+
+  @media screen and (min-resolution: 192dpi) {
+    html.retina & {
+      @{property}: 0.5px solid @color;
+    }
+  }
+}

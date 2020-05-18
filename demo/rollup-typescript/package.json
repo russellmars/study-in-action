@@ -1,0 +1,20 @@
+{
+  "name": "typescript-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c "
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.1",
+    "rollup": "^2.10.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}

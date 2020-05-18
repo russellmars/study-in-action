@@ -1,0 +1,36 @@
+@import url("../import.less");
+
+.user {
+  margin: 20px 0;
+
+  &__avatar {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__loginname {
+    vertical-align: middle;
+    margin-left: @space;
+  }
+
+  &__score {
+    color: #778087;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #778087;
+  }
+
+  &__section {
+    &:not(:first-of-type) {
+      margin-top: @space;
+    }
+
+    &-content {
+      padding: @space;
+      background: #fff;
+      font-size: 14px;
+    }
+  }
+}
