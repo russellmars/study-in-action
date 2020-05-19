@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "jest"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "types"
+  ]
+}

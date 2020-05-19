@@ -1,0 +1,28 @@
+{
+  "name": "npm-ts",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "types/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "build:lib": "tsc -p ./tsconfig.cjs.json && tsc -p ./tsconfig.es.json",
+    "test": "jest"
+  },
+  "devDependencies2": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@babel/types": "^7.9.6",
+    "@types/jest": "^25.2.3",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.2"
+  }
+}

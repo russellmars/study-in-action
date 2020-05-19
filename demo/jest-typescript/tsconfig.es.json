@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "module": "ES2015",
+    "outDir": "./es",
+    "declaration": true,
+    "declarationDir": "types"
+  }
+}
