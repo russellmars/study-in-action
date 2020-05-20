@@ -24,17 +24,3 @@ pnpm run dev --filter ./packages/cnode-web-vue
 cd ./packages/cnode-web-vue
 pnpm run dev
 ```
-
-``` sh
-# install global module
-npm install -g pnpm
-
-# install local dependencies
-pnpm install
-
-# build libs
-pnpm run prepack
-
-# cd to webapp root
-pnpm run dev --filter ./packages/cnode-web-vue
-``` 
