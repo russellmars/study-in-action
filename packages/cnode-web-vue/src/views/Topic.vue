@@ -70,9 +70,8 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Watch, Prop } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 import { getTopicDetail } from "@mars/cnode-apis";
-import { Route } from "vue-router";
 import { TopicInfo, CnodeResponseBody } from "@mars/cnode-apis/types";
 import CNodeAvatar from "@/components/CNodeAvatar.vue";
 import CNodeSectionHeader from "@/components/CNodeSectionHeader.vue";
@@ -91,14 +90,14 @@ export default class Topic extends Vue {
   topic: TopicInfo | null = null;
 
   created() {
-    this.initPageData(this.$route);
+    this.initPageData();
   }
 
   marked(markdown: string) {
     return marked(markdown);
   }
 
-  async initPageData(route: Route) {
+  async initPageData() {
     await this.fetchData();
   }
 

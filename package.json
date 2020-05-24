@@ -3,7 +3,14 @@
   "private": true,
   "version": "0.0.1",
   "author": "russellmars <russellmars@sina.com>",
-  "keywords": ["study", "nodejs", "vue", "typescript", "rollup", "gulp"],
+  "keywords": [
+    "study",
+    "nodejs",
+    "vue",
+    "typescript",
+    "rollup",
+    "gulp"
+  ],
   "scripts": {
     "prepack": "pnpm run -r build:lib --filter ./packages"
   },

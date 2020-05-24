@@ -1,4 +1,4 @@
-# cnode-cli-vue
+# cnode-web-vue
 
 ## Project setup
 ```

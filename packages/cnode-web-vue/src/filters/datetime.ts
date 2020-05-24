@@ -1,7 +1,10 @@
 import dayjs from "dayjs";
 
-export default function(time: any, pattern: string) {
-  let value = dayjs(time);
+export default function(
+  time: string | number | Date | dayjs.Dayjs,
+  pattern: string
+) {
+  const value = dayjs(time);
   let tempPattern = "YYYY-MM-DD HH:mm:ss";
 
   if (!pattern) {

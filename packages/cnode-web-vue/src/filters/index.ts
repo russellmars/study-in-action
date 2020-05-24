@@ -1,12 +1,12 @@
-import Vue from "vue";
 import postTab from "./post-tab";
 import datetime from "./datetime";
 import fromNow from "./from-now";
+import Vue from "vue";
 
 export default {
   install(vue: typeof Vue) {
-    Vue.filter("postTab", postTab);
-    Vue.filter("datetime", datetime);
-    Vue.filter("fromNow", fromNow);
+    vue.filter("postTab", postTab);
+    vue.filter("datetime", datetime);
+    vue.filter("fromNow", fromNow);
   }
 };

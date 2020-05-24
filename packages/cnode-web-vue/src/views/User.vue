@@ -87,6 +87,7 @@ export default class User extends Vue {
 
   userInfo: UserInfo | null = null;
 
+  // eslint-disable-next-line
   collect_topics: Topic[] = [];
 
   async created() {
@@ -103,6 +104,7 @@ export default class User extends Vue {
   async fetchCollectTopics() {
     const result: CnodeResponseBody = await getCollectTopics(this.loginname);
     if (result.success) {
+      // eslint-disable-next-line
       this.collect_topics = result.data as Topic[];
     }
   }

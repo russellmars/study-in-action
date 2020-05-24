@@ -85,7 +85,7 @@ import {
   TopicInfo,
   TopicTabType
 } from "@mars/cnode-apis/types";
-import { Route, NavigationGuard } from "vue-router/types/router";
+import { Route } from "vue-router/types/router";
 import CNodeAvatar from "@/components/CNodeAvatar.vue";
 // class-component-hooks.js
 // Register the router hooks with their names
@@ -97,7 +97,7 @@ import CNodeAvatar from "@/components/CNodeAvatar.vue";
 })
 export default class Home extends Vue {
   topics: TopicInfo[] = [];
-  page: number = 1;
+  page = 1;
   tab: TopicTabType = "";
   tabs: TopicTabType[] = ["", "good", "share", "ask", "job"];
 
@@ -116,7 +116,7 @@ export default class Home extends Vue {
   }
 
   async resolveQueryByRoute(route: Route) {
-    const { query } = this.$route;
+    const { query } = route;
     const tab = query.tab as TopicTabType;
     const page = parseInt(query.page as string) || 1;
     this.tab = this.tabs.includes(tab) ? tab : "";
